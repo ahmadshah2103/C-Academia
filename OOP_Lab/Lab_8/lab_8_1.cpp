@@ -2,32 +2,26 @@
 
 using namespace std;
 
-#if(0)
-// Our base class
-class shape {
-public:
-    virtual void draw() override {cout << "Draw shape" << endl;} // simple virtual function
-};// End of base clss
-}
-#endif
 
 // Our base class
-//  abstract class
 class shape {
+protected:
+    int area;
 public:
-    virtual void draw() = 0; // pure virtual function
+
+    virtual void display() = 0; // pure virtual function
 };// End of base class
 
 // 01. Derive class: circle
 class circle: public shape {
 public:
-    void draw() override {cout << "Draw circle" << endl;}
+    void display() override {cout << "Draw circle" << endl;}
 };
 
 // 02. Derived class: rectangle
 class rectangle: public shape {
 public:
-    void draw() override {cout << "Draw rectangle" << endl;}
+    void display() override {cout << "Draw rectangle" << endl;}
 };
 
 // 03. Derived clas: triangle
